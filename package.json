@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CodeWithOz/arabic2english/issues"
   },
-  "homepage": "https://github.com/CodeWithOz/arabic2english#readme"
+  "homepage": "https://github.com/CodeWithOz/arabic2english#readme",
+  "devDependencies": {
+    "babel-jest": "^24.1.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }
