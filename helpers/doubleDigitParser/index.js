@@ -6,6 +6,14 @@ export function getSecondDigit(strNum) {
   return strNum[1];
 }
 
-export function handleLeadingZeros() {}
+// this function will be called after the leading digit has
+// been confirmed as zero
+export function handleLeadingZeros(strNum) {
+  const secondDigit = getSecondDigit(strNum);
+  if (secondDigit === '0') {
+    // 00 alone has no name
+    return '';
+  }
+}
 
 export default function parseDouble() {}
