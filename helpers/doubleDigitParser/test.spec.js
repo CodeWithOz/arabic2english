@@ -7,8 +7,10 @@ import parseDouble, {
   handlePostTens
 } from './';
 
-test('parseDouble is a function', () => {
-  expect(typeof parseDouble).toEqual('function');
+describe('parseDouble', () => {
+  test('is a function', () => {
+    expect(typeof parseDouble).toEqual('function');
+  });
 });
 
 describe('getFirstDigit', () => {
