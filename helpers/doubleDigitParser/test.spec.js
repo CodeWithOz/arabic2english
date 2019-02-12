@@ -82,6 +82,17 @@ describe('getPostTenName', () => {
   test('is a function', () => {
     expect(typeof getPostTenName).toEqual('function');
   });
+
+  test('gets the correct name for 20-90', () => {
+    expect(getPostTenName('20')).toEqual('twenty');
+    expect(getPostTenName('30')).toEqual('thirty');
+    expect(getPostTenName('40')).toEqual('forty');
+    expect(getPostTenName('50')).toEqual('fifty');
+    expect(getPostTenName('60')).toEqual('sixty');
+    expect(getPostTenName('70')).toEqual('seventy');
+    expect(getPostTenName('80')).toEqual('eighty');
+    expect(getPostTenName('90')).toEqual('ninety');
+  });
 });
 
 describe('handlePostTens', () => {
