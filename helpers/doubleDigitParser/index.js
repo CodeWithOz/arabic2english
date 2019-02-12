@@ -34,7 +34,13 @@ export function getPostTenName(strNum) {
   return postTensMap[firstDigit];
 }
 
-export function handlePostTens() {}
+export function handlePostTens(strNum) {
+  const postTenName = getPostTenName(strNum);
+  const secondDigit = handleSecondDigit(strNum);
+  if (secondDigit === '') {
+    return postTenName;
+  }
+}
 
 const tensMap = {
   '10': 'ten',
