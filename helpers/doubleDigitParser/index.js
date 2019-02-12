@@ -1,3 +1,5 @@
+import parseSingle from '../singleDigitParser';
+
 export function getFirstDigit(strNum) {
   return strNum[0];
 }
@@ -10,10 +12,12 @@ export function getSecondDigit(strNum) {
 // been confirmed as zero
 export function handleLeadingZeros(strNum) {
   const secondDigit = getSecondDigit(strNum);
-  if (secondDigit === '0') {
-    // 00 alone has no name
-    return '';
+  if (secondDigit !== '0') {
+    return parseSingle(secondDigit);
   }
+
+  // 00 alone has no name
+  return '';
 }
 
 export default function parseDouble() {}
