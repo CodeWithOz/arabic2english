@@ -1,5 +1,9 @@
 import cliArgToNum from './convertCliArgToNum';
 
+test('cliArgToNum is a function', () => {
+  expect(typeof cliArgToNum).toEqual('function');
+});
+
 test(`Converts strings to the correct numbers`, () => {
   let strNum = '0';
   let convertedNum = cliArgToNum(strNum);
