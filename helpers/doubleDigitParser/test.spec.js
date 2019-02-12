@@ -42,4 +42,16 @@ describe('handleLeadingZeros', () => {
   test('returs an empty string for 00', () => {
     expect(handleLeadingZeros('00')).toEqual('');
   });
+
+  test('returs the correct name for 01-09', () => {
+    expect(handleLeadingZeros('01')).toEqual('one');
+    expect(handleLeadingZeros('02')).toEqual('two');
+    expect(handleLeadingZeros('03')).toEqual('three');
+    expect(handleLeadingZeros('04')).toEqual('four');
+    expect(handleLeadingZeros('05')).toEqual('five');
+    expect(handleLeadingZeros('06')).toEqual('six');
+    expect(handleLeadingZeros('07')).toEqual('seven');
+    expect(handleLeadingZeros('08')).toEqual('eight');
+    expect(handleLeadingZeros('09')).toEqual('nine');
+  });
 });
