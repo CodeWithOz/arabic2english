@@ -39,7 +39,7 @@ describe('handleLeadingZeros', () => {
     expect(typeof handleLeadingZeros).toEqual('function');
   });
 
-  // test('returs an empty string for 00', () => {
-  //   expect(handleLeadingZeros('00')).toEqual('');
-  // });
+  test('returs an empty string for 00', () => {
+    expect(handleLeadingZeros('00')).toEqual('');
+  });
 });
