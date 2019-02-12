@@ -134,4 +134,8 @@ describe('handleLeadingZeros', () => {
   test('is a function', () => {
     expect(typeof handleLeadingZeros).toEqual('function');
   });
+
+  test(`doesn't name 00`, () => {
+    expect(handleLeadingZeros('00')).toEqual('');
+  });
 });
