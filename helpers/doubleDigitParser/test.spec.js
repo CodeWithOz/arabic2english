@@ -21,6 +21,12 @@ describe('parseDouble', () => {
   test('correctly names teens', () => {
     expect(parseDouble('17')).toEqual('seventeen');
   });
+
+  test('correctly names post-tens', () => {
+    expect(parseDouble('30')).toEqual('thirty');
+    expect(parseDouble('83')).toEqual('eighty-three');
+    expect(parseDouble('66')).toEqual('sixty-six');
+  });
 });
 
 describe('getFirstDigit', () => {
