@@ -1,7 +1,8 @@
 import parseDouble, {
   getFirstDigit,
   getSecondDigit,
-  handleLeadingZeros
+  handleLeadingZeros,
+  handleTens
 } from './';
 
 test('parseDouble is a function', () => {
@@ -53,5 +54,11 @@ describe('handleLeadingZeros', () => {
     expect(handleLeadingZeros('07')).toEqual('seven');
     expect(handleLeadingZeros('08')).toEqual('eight');
     expect(handleLeadingZeros('09')).toEqual('nine');
+  });
+});
+
+describe('handleTens', () => {
+  test('is a function', () => {
+    expect(typeof handleTens).toEqual('function');
   });
 });
