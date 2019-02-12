@@ -11,6 +11,6 @@ const map = {
   '9': 'nine'
 };
 
-export default function parseSingle(num) {
-  return map[num];
+export default function parseSingle(strNum) {
+  return map[strNum];
 }
