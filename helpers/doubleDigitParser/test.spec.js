@@ -39,11 +39,11 @@ describe('handleLeadingZeros', () => {
     expect(typeof handleLeadingZeros).toEqual('function');
   });
 
-  test('returs an empty string for 00', () => {
+  test('returns an empty string for 00', () => {
     expect(handleLeadingZeros('00')).toEqual('');
   });
 
-  test('returs the correct name for 01-09', () => {
+  test('returns the correct name for 01-09', () => {
     expect(handleLeadingZeros('01')).toEqual('one');
     expect(handleLeadingZeros('02')).toEqual('two');
     expect(handleLeadingZeros('03')).toEqual('three');
