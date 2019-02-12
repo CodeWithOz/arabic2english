@@ -17,6 +17,10 @@ describe('parseDouble', () => {
     expect(parseDouble('11')).toEqual('eleven');
     expect(parseDouble('12')).toEqual('twelve');
   });
+
+  test('correctly names teens', () => {
+    expect(parseDouble('17')).toEqual('seventeen');
+  });
 });
 
 describe('getFirstDigit', () => {
