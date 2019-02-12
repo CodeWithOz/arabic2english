@@ -1,4 +1,4 @@
-import parseSingle from './singleDigitParser';
+import parseSingle from './';
 
 test('parseSingle is a function', () => {
   expect(typeof parseSingle).toEqual('function');
