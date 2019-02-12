@@ -64,4 +64,8 @@ export default function parseDouble(strNum) {
   if (firstDigit === '1') {
     return handleTens(strNum);
   }
+
+  if (firstDigit.search(/[2-9]/) === 0) {
+    return handlePostTens(strNum);
+  }
 }
