@@ -103,4 +103,10 @@ describe('handlePostTens', () => {
   test('correctly handles zero-endings', () => {
     expect(handlePostTens('40')).toEqual('forty');
   });
+
+  test('correctly handles non-zero endings', () => {
+    expect(handlePostTens('51')).toEqual('fifty-one');
+    expect(handlePostTens('99')).toEqual('ninety-nine');
+    expect(handlePostTens('23')).toEqual('twenty-three');
+  });
 });
