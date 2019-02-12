@@ -18,7 +18,21 @@ export function handleSecondDigit(strNum) {
   return '';
 }
 
-export function getPostTenName() {}
+const postTensMap = {
+  '2': 'twenty',
+  '3': 'thirty',
+  '4': 'forty',
+  '5': 'fifty',
+  '6': 'sixty',
+  '7': 'seventy',
+  '8': 'eighty',
+  '9': 'ninety'
+};
+
+export function getPostTenName(strNum) {
+  const firstDigit = getFirstDigit(strNum);
+  return postTensMap[firstDigit];
+}
 
 export function handlePostTens() {}
 
