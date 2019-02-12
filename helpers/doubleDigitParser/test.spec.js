@@ -99,4 +99,8 @@ describe('handlePostTens', () => {
   test('is a function', () => {
     expect(typeof handlePostTens).toEqual('function');
   });
+
+  test('correctly handles zero-endings', () => {
+    expect(handlePostTens('40')).toEqual('forty');
+  });
 });
