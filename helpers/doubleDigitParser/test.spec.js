@@ -1,7 +1,7 @@
 import parseDouble, {
   getFirstDigit,
   getSecondDigit,
-  handleLeadingZeros,
+  handleSecondDigit,
   handleTens
 } from './';
 
@@ -35,25 +35,25 @@ describe('getSecondDigit', () => {
   });
 });
 
-describe('handleLeadingZeros', () => {
+describe('handleSecondDigit', () => {
   test('is a function', () => {
-    expect(typeof handleLeadingZeros).toEqual('function');
+    expect(typeof handleSecondDigit).toEqual('function');
   });
 
   test('returns an empty string for 00', () => {
-    expect(handleLeadingZeros('00')).toEqual('');
+    expect(handleSecondDigit('00')).toEqual('');
   });
 
   test('returns the correct name for 01-09', () => {
-    expect(handleLeadingZeros('01')).toEqual('one');
-    expect(handleLeadingZeros('02')).toEqual('two');
-    expect(handleLeadingZeros('03')).toEqual('three');
-    expect(handleLeadingZeros('04')).toEqual('four');
-    expect(handleLeadingZeros('05')).toEqual('five');
-    expect(handleLeadingZeros('06')).toEqual('six');
-    expect(handleLeadingZeros('07')).toEqual('seven');
-    expect(handleLeadingZeros('08')).toEqual('eight');
-    expect(handleLeadingZeros('09')).toEqual('nine');
+    expect(handleSecondDigit('01')).toEqual('one');
+    expect(handleSecondDigit('02')).toEqual('two');
+    expect(handleSecondDigit('03')).toEqual('three');
+    expect(handleSecondDigit('04')).toEqual('four');
+    expect(handleSecondDigit('05')).toEqual('five');
+    expect(handleSecondDigit('06')).toEqual('six');
+    expect(handleSecondDigit('07')).toEqual('seven');
+    expect(handleSecondDigit('08')).toEqual('eight');
+    expect(handleSecondDigit('09')).toEqual('nine');
   });
 });
 

@@ -8,15 +8,13 @@ export function getSecondDigit(strNum) {
   return strNum[1];
 }
 
-// this function will be called after the leading digit has
-// been confirmed as zero
-export function handleLeadingZeros(strNum) {
+export function handleSecondDigit(strNum) {
   const secondDigit = getSecondDigit(strNum);
   if (secondDigit !== '0') {
+    // zero is not named in non-single digit numbers
     return parseSingle(secondDigit);
   }
 
-  // 00 alone has no name
   return '';
 }
 
