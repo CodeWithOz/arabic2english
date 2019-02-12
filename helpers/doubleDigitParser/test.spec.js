@@ -25,6 +25,13 @@ describe('getSecondDigit', () => {
   test('is a function', () => {
     expect(typeof getSecondDigit).toEqual('function');
   });
+
+  test('returns the correct second digit', () => {
+    expect(getSecondDigit('10')).toEqual('0');
+    expect(getSecondDigit('23')).toEqual('3');
+    expect(getSecondDigit('57')).toEqual('7');
+    expect(getSecondDigit('94')).toEqual('4');
+  });
 });
 
 describe('handleLeadingZeros', () => {
