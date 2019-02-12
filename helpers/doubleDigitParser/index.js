@@ -37,9 +37,7 @@ export function getPostTenName(strNum) {
 export function handlePostTens(strNum) {
   const postTenName = getPostTenName(strNum);
   const secondDigit = handleSecondDigit(strNum);
-  if (secondDigit === '') {
-    return postTenName;
-  }
+  return secondDigit ? `${postTenName}-${secondDigit}` : postTenName;
 }
 
 const tensMap = {
