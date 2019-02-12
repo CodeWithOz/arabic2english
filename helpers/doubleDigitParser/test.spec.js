@@ -68,10 +68,10 @@ describe('handleTens', () => {
     expect(handleTens('12')).toEqual('twelve');
     expect(handleTens('13')).toEqual('thirteen');
     expect(handleTens('14')).toEqual('fourteen');
-    expect(handleTens('15')).toEqual('fiveteen');
+    expect(handleTens('15')).toEqual('fifteen');
     expect(handleTens('16')).toEqual('sixteen');
     expect(handleTens('17')).toEqual('seventeen');
-    expect(handleTens('18')).toEqual('eightteen');
+    expect(handleTens('18')).toEqual('eighteen');
     expect(handleTens('19')).toEqual('nineteen');
   });
 });
