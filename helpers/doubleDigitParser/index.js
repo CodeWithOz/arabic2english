@@ -59,7 +59,13 @@ export function handleTens(strNum) {
   return tensMap[strNum];
 }
 
-export function handleLeadingZeros() {}
+// this function will be called after the leading digit has
+// been confirmed as zero
+// NOTE: this function doesn't handle '00' alone
+// it is only used when there is a leading non-zero digit (eg 300)
+export function handleLeadingZeros(strNum) {
+  return handleSecondDigit(strNum);
+}
 
 export default function parseDouble(strNum) {
   const firstDigit = getFirstDigit(strNum);
