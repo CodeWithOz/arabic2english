@@ -20,6 +20,23 @@ export function handleLeadingZeros(strNum) {
   return '';
 }
 
-export function handleTens() {}
+const tensMap = {
+  '10': 'ten',
+  '11': 'eleven',
+  '12': 'twelve',
+  '13': 'thirteen',
+  '14': 'fourteen',
+  '15': 'fifteen',
+  '16': 'sixteen',
+  '17': 'seventeen',
+  '18': 'eighteen',
+  '19': 'nineteen'
+};
+
+// this function will be called after the leading digit has
+// been confirmed as one
+export function handleTens(strNum) {
+  return tensMap[strNum];
+}
 
 export default function parseDouble() {}
