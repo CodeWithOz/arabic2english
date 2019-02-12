@@ -1,4 +1,8 @@
-import parseDouble, { getFirstDigit, handleLeadingZeros } from './';
+import parseDouble, {
+  getFirstDigit,
+  getSecondDigit,
+  handleLeadingZeros
+} from './';
 
 test('parseDouble is a function', () => {
   expect(typeof parseDouble).toEqual('function');
@@ -17,12 +21,18 @@ describe('getFirstDigit', () => {
   });
 });
 
+describe('getSecondDigit', () => {
+  test('is a function', () => {
+    expect(typeof getSecondDigit).toEqual('function');
+  });
+});
+
 describe('handleLeadingZeros', () => {
   test('is a function', () => {
     expect(typeof handleLeadingZeros).toEqual('function');
   });
 
-  test('returs an empty string for 00', () => {
-    expect(handleLeadingZeros('00')).toEqual('');
-  });
+  // test('returs an empty string for 00', () => {
+  //   expect(handleLeadingZeros('00')).toEqual('');
+  // });
 });
