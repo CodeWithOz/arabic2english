@@ -1,0 +1,19 @@
+{
+  "name": "arabic2english",
+  "version": "1.0.0",
+  "description": "Script that converts arabic numerals to english numerals.",
+  "main": "arabic2english.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWithOz/arabic2english.git"
+  },
+  "author": "Uche Ozoemena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeWithOz/arabic2english/issues"
+  },
+  "homepage": "https://github.com/CodeWithOz/arabic2english#readme"
+}
