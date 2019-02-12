@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/CodeWithOz/arabic2english#readme",
   "devDependencies": {
-    "babel-jest": "^24.1.0",
-    "babel-preset-env": "^1.7.0"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0"
   }
 }
