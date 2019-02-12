@@ -1,1 +1,1 @@
-export default function parser(num) {}
+export default function parseSingle(num) {}

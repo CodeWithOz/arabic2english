@@ -1,5 +1,5 @@
-import parser from './singleDigitParser';
+import parseSingle from './singleDigitParser';
 
-test('parser is a function', () => {
-  expect(typeof parser).toEqual('function');
+test('parseSingle is a function', () => {
+  expect(typeof parseSingle).toEqual('function');
 });
