@@ -138,4 +138,16 @@ describe('handleLeadingZeros', () => {
   test(`doesn't name 00`, () => {
     expect(handleLeadingZeros('00')).toEqual('');
   });
+
+  test('correctly names 01-09', () => {
+    expect(handleLeadingZeros('01')).toEqual('one');
+    expect(handleLeadingZeros('02')).toEqual('two');
+    expect(handleLeadingZeros('03')).toEqual('three');
+    expect(handleLeadingZeros('04')).toEqual('four');
+    expect(handleLeadingZeros('05')).toEqual('five');
+    expect(handleLeadingZeros('06')).toEqual('six');
+    expect(handleLeadingZeros('07')).toEqual('seven');
+    expect(handleLeadingZeros('08')).toEqual('eight');
+    expect(handleLeadingZeros('09')).toEqual('nine');
+  });
 });
