@@ -20,4 +20,6 @@ export function handleLeadingZeros(strNum) {
   return '';
 }
 
+export function handleTens() {}
+
 export default function parseDouble() {}
