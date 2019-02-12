@@ -2,7 +2,8 @@ import parseDouble, {
   getFirstDigit,
   getSecondDigit,
   handleSecondDigit,
-  handleTens
+  handleTens,
+  handlePostTens
 } from './';
 
 test('parseDouble is a function', () => {
@@ -73,5 +74,11 @@ describe('handleTens', () => {
     expect(handleTens('17')).toEqual('seventeen');
     expect(handleTens('18')).toEqual('eighteen');
     expect(handleTens('19')).toEqual('nineteen');
+  });
+});
+
+describe('handlePostTens', () => {
+  test('is a function', () => {
+    expect(typeof handlePostTens).toEqual('function');
   });
 });
