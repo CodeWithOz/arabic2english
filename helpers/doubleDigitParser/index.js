@@ -59,4 +59,9 @@ export function handleTens(strNum) {
   return tensMap[strNum];
 }
 
-export default function parseDouble() {}
+export default function parseDouble(strNum) {
+  const firstDigit = getFirstDigit(strNum);
+  if (firstDigit === '1') {
+    return handleTens(strNum);
+  }
+}
