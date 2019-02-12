@@ -1,4 +1,4 @@
-import parseDouble, { getFirstDigit } from './';
+import parseDouble, { getFirstDigit, handleLeadingZeros } from './';
 
 test('parseDouble is a function', () => {
   expect(typeof parseDouble).toEqual('function');
@@ -14,5 +14,11 @@ describe('getFirstDigit', () => {
     expect(getFirstDigit('23')).toEqual('2');
     expect(getFirstDigit('57')).toEqual('5');
     expect(getFirstDigit('94')).toEqual('9');
+  });
+});
+
+describe('handleLeadingZeros', () => {
+  test('is a function', () => {
+    expect(typeof handleLeadingZeros).toEqual('function');
   });
 });
