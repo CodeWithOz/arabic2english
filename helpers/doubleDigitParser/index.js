@@ -18,6 +18,8 @@ export function handleSecondDigit(strNum) {
   return '';
 }
 
+export function handlePostTens() {}
+
 const tensMap = {
   '10': 'ten',
   '11': 'eleven',
