@@ -1,4 +1,4 @@
-import { getLast3chars } from './';
+import { getLast3chars, getSetName } from './';
 
 describe('getLast3chars', () => {
   test('is a function', () => {
@@ -14,5 +14,11 @@ describe('getLast3chars', () => {
   test('gets last 3 chars when length is greater than 3', () => {
     expect(getLast3chars('9843')).toEqual('843');
     expect(getLast3chars('23098')).toEqual('098');
+  });
+});
+
+describe('getSetName', () => {
+  test('is a function', () => {
+    expect(typeof getSetName).toEqual('function');
   });
 });
