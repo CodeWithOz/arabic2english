@@ -56,4 +56,10 @@ describe('parseLarge', () => {
   test('is a function', () => {
     expect(typeof parseLarge).toEqual('function');
   });
+
+  test('correctly names < 4-digit numbers', () => {
+    expect(parseLarge('01')).toEqual('one');
+    expect(parseLarge('444')).toEqual('four hundred and forty-four');
+    expect(parseLarge('81')).toEqual('eighty-one');
+  });
 });
