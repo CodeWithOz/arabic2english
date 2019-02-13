@@ -2,7 +2,11 @@ export function getLast3chars(strNum) {
   return strNum.slice(-3);
 }
 
-export function removeLast3chars() {}
+export function removeLast3chars(strNum) {
+  if (strNum.length < 4) {
+    return strNum;
+  }
+}
 
 const setsMap = {
   1: '',
