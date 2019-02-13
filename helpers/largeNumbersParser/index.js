@@ -2,6 +2,8 @@ export function getLast3chars(strNum) {
   return strNum.slice(-3);
 }
 
+export function removeLast3chars() {}
+
 const setsMap = {
   1: '',
   2: 'thousand',
