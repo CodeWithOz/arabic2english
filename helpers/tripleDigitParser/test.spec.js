@@ -36,4 +36,16 @@ describe('getHundredName', () => {
   test('is a function', () => {
     expect(typeof getHundredName).toEqual('function');
   });
+
+  test('correctly names 100-900', () => {
+    expect(getHundredName('100')).toEqual('one hundred');
+    expect(getHundredName('200')).toEqual('two hundred');
+    expect(getHundredName('300')).toEqual('three hundred');
+    expect(getHundredName('400')).toEqual('four hundred');
+    expect(getHundredName('500')).toEqual('five hundred');
+    expect(getHundredName('600')).toEqual('six hundred');
+    expect(getHundredName('700')).toEqual('seven hundred');
+    expect(getHundredName('800')).toEqual('eight hundred');
+    expect(getHundredName('900')).toEqual('nine hundred');
+  });
 });
