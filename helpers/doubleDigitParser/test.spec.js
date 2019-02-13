@@ -17,6 +17,12 @@ describe('parseDouble', () => {
     expect(parseDouble('00')).toEqual('');
   });
 
+  test('correctly names 01-09', () => {
+    expect(parseDouble('01')).toEqual('one');
+    expect(parseDouble('05')).toEqual('five');
+    expect(parseDouble('07')).toEqual('seven');
+  });
+
   test('correctly names pre-teens', () => {
     expect(parseDouble('10')).toEqual('ten');
     expect(parseDouble('11')).toEqual('eleven');
