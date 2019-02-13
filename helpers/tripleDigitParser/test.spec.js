@@ -20,4 +20,8 @@ describe('removeFirstDigit', () => {
   test('is a function', () => {
     expect(typeof removeFirstDigit).toEqual('function');
   });
+
+  test('returns the last 2 chars in a 3-char string', () => {
+    expect(removeFirstDigit('101')).toEqual('01');
+  });
 });
