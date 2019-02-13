@@ -1,4 +1,5 @@
-import parseDouble from '../doubleDigitParser';
+import parseDouble, { getFirstDigit } from '../doubleDigitParser';
+import parseSingle from '../singleDigitParser';
 
 export function removeFirstDigit(strNum) {
   return strNum.slice(1);
@@ -11,4 +12,9 @@ export function handleLeadingZeros(strNum) {
   return parseDouble(last2digits);
 }
 
-export function getHundredName() {}
+// this function will be called after confirming that the leading
+// digit is non-zero
+export function getHundredName(strNum) {
+  const firstDigit = getFirstDigit(strNum);
+  return `${parseSingle(firstDigit)} hundred`;
+}
