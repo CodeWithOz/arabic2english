@@ -77,7 +77,7 @@ export default function parseDouble(strNum) {
     return nameTens(strNum);
   }
 
-  if (firstDigit.search(/[2-9]/) === 0) {
+  if (/[2-9]/.test(firstDigit)) {
     return namePostTens(strNum);
   }
 }
