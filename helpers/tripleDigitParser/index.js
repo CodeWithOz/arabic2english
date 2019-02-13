@@ -27,4 +27,10 @@ export function getHundredName(strNum) {
   }`;
 }
 
-export default function parseTriple() {}
+export default function parseTriple(strNum) {
+  const firstDigit = getFirstDigit(strNum);
+
+  if (firstDigit === '0') {
+    return handleLeadingZeros(strNum);
+  }
+}
