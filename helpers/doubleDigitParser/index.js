@@ -8,7 +8,7 @@ export function getSecondDigit(strNum) {
   return strNum[1];
 }
 
-export function handleSecondDigit(strNum) {
+export function nameSecondDigit(strNum) {
   const secondDigit = getSecondDigit(strNum);
   if (secondDigit !== '0') {
     // zero is not named in non-single digit numbers
@@ -36,7 +36,7 @@ export function getPostTenName(strNum) {
 
 export function handlePostTens(strNum) {
   const postTenName = getPostTenName(strNum);
-  const secondDigit = handleSecondDigit(strNum);
+  const secondDigit = nameSecondDigit(strNum);
   return secondDigit ? `${postTenName}-${secondDigit}` : postTenName;
 }
 
@@ -64,7 +64,7 @@ export function handleTens(strNum) {
 // NOTE: this function doesn't handle '00' alone
 // it is only used when there is a leading non-zero digit (eg 300)
 export function handleLeadingZeros(strNum) {
-  return handleSecondDigit(strNum);
+  return nameSecondDigit(strNum);
 }
 
 export default function parseDouble(strNum) {
