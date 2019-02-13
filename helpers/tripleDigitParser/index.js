@@ -1,5 +1,6 @@
-import parseDouble, { getFirstDigit } from '../doubleDigitParser';
+import parseDouble from '../doubleDigitParser';
 import parseSingle from '../singleDigitParser';
+import { getFirstDigit } from '../';
 
 export function removeFirstDigit(strNum) {
   return strNum.slice(1);

@@ -1,8 +1,5 @@
 import parseSingle from '../singleDigitParser';
-
-export function getFirstDigit(strNum) {
-  return strNum[0];
-}
+import { getFirstDigit } from '../';
 
 export function getSecondDigit(strNum) {
   return strNum[1];
