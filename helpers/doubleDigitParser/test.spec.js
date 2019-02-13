@@ -13,6 +13,10 @@ describe('parseDouble', () => {
     expect(typeof parseDouble).toEqual('function');
   });
 
+  test('does not name 00', () => {
+    expect(parseDouble('00')).toEqual('');
+  });
+
   test('correctly names pre-teens', () => {
     expect(parseDouble('10')).toEqual('ten');
     expect(parseDouble('11')).toEqual('eleven');
