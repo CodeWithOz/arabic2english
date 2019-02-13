@@ -1,4 +1,4 @@
-import { getLast3chars, getSetName, removeLast3chars } from './';
+import parseLarge, { getLast3chars, getSetName, removeLast3chars } from './';
 
 describe('getLast3chars', () => {
   test('is a function', () => {
@@ -49,5 +49,11 @@ describe('getSetName', () => {
     expect(getSetName(4)).toEqual('billion');
     expect(getSetName(5)).toEqual('trillion');
     expect(getSetName(6)).toEqual('quadrillion');
+  });
+});
+
+describe('parseLarge', () => {
+  test('is a function', () => {
+    expect(typeof parseLarge).toEqual('function');
   });
 });
