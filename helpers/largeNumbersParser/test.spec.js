@@ -21,6 +21,11 @@ describe('removeLast3chars', () => {
   test('is a function', () => {
     expect(typeof removeLast3chars).toEqual('function');
   });
+
+  test('returns the same string when length is less than 4', () => {
+    expect(removeLast3chars('323')).toEqual('323');
+    expect(removeLast3chars('8')).toEqual('8');
+  });
 });
 
 describe('getSetName', () => {
