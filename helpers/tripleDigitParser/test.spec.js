@@ -51,7 +51,7 @@ describe('getHundredName', () => {
 
   test('correctly names 10*-90*', () => {
     expect(getHundredName('305')).toEqual('three hundred and five');
-    expect(getHundredName('802')).toEqual('eigth hundred and two');
+    expect(getHundredName('802')).toEqual('eight hundred and two');
     expect(getHundredName('908')).toEqual('nine hundred and eight');
   });
 });
