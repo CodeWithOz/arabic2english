@@ -21,4 +21,8 @@ describe('getSetName', () => {
   test('is a function', () => {
     expect(typeof getSetName).toEqual('function');
   });
+
+  test('returns empty string for set with index of 1', () => {
+    expect(getSetName(1)).toEqual('');
+  });
 });
