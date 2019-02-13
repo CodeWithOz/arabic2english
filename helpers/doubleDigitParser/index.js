@@ -69,6 +69,10 @@ export function handleLeadingZeros(strNum) {
 
 export default function parseDouble(strNum) {
   const firstDigit = getFirstDigit(strNum);
+  if (firstDigit === '0') {
+    return handleLeadingZeros(strNum);
+  }
+
   if (firstDigit === '1') {
     return handleTens(strNum);
   }
