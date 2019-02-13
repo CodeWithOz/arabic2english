@@ -48,4 +48,10 @@ describe('getHundredName', () => {
     expect(getHundredName('800')).toEqual('eight hundred');
     expect(getHundredName('900')).toEqual('nine hundred');
   });
+
+  test('correctly names 10*-90*', () => {
+    expect(getHundredName('305')).toEqual('three hundred and five');
+    expect(getHundredName('802')).toEqual('eigth hundred and two');
+    expect(getHundredName('908')).toEqual('nine hundred and eight');
+  });
 });
