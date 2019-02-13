@@ -77,4 +77,8 @@ describe('parseTriple', () => {
   test('is a function', () => {
     expect(typeof parseTriple).toEqual('function');
   });
+
+  test(`doesn't name 000`, () => {
+    expect(parseTriple('000')).toEqual('');
+  });
 });
