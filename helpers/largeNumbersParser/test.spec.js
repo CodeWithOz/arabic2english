@@ -25,4 +25,12 @@ describe('getSetName', () => {
   test('returns empty string for set with index of 1', () => {
     expect(getSetName(1)).toEqual('');
   });
+
+  test('returns correct names of sets 2-6', () => {
+    expect(getSetName(2)).toEqual('thousand');
+    expect(getSetName(3)).toEqual('million');
+    expect(getSetName(4)).toEqual('billion');
+    expect(getSetName(5)).toEqual('trillion');
+    expect(getSetName(6)).toEqual('quadrillion');
+  });
 });
