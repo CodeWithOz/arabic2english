@@ -7,6 +7,6 @@ export function removeFirstDigit(strNum) {
 // this function will be called after the first digit has been
 // confirmed to be zero
 export function handleLeadingZeros(strNum) {
-  const last2digits = strNum.slice(1);
+  const last2digits = removeFirstDigit(strNum);
   return parseDouble(last2digits);
 }
