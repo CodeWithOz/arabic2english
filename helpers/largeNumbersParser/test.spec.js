@@ -26,6 +26,12 @@ describe('removeLast3chars', () => {
     expect(removeLast3chars('323')).toEqual('323');
     expect(removeLast3chars('8')).toEqual('8');
   });
+
+  test('removes the last 3 chars when length is > 3', () => {
+    expect(removeLast3chars('1234')).toMatch(/^1$/);
+    expect(removeLast3chars('23435')).toMatch(/^23$/);
+    expect(removeLast3chars('84375483')).toMatch(/^84375$/);
+  });
 });
 
 describe('getSetName', () => {
