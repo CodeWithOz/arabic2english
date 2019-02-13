@@ -34,7 +34,7 @@ export function getPostTenName(strNum) {
   return postTensMap[firstDigit];
 }
 
-export function handlePostTens(strNum) {
+export function namePostTens(strNum) {
   const postTenName = getPostTenName(strNum);
   const secondDigit = nameSecondDigit(strNum);
   return secondDigit ? `${postTenName}-${secondDigit}` : postTenName;
@@ -78,6 +78,6 @@ export default function parseDouble(strNum) {
   }
 
   if (firstDigit.search(/[2-9]/) === 0) {
-    return handlePostTens(strNum);
+    return namePostTens(strNum);
   }
 }

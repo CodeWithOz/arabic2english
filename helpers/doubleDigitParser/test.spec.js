@@ -4,7 +4,7 @@ import parseDouble, {
   nameSecondDigit,
   handleTens,
   getPostTenName,
-  handlePostTens,
+  namePostTens,
   handleLeadingZeros
 } from './';
 
@@ -124,19 +124,19 @@ describe('getPostTenName', () => {
   });
 });
 
-describe('handlePostTens', () => {
+describe('namePostTens', () => {
   test('is a function', () => {
-    expect(typeof handlePostTens).toEqual('function');
+    expect(typeof namePostTens).toEqual('function');
   });
 
   test('correctly handles zero-endings', () => {
-    expect(handlePostTens('40')).toEqual('forty');
+    expect(namePostTens('40')).toEqual('forty');
   });
 
   test('correctly handles non-zero endings', () => {
-    expect(handlePostTens('51')).toEqual('fifty-one');
-    expect(handlePostTens('99')).toEqual('ninety-nine');
-    expect(handlePostTens('23')).toEqual('twenty-three');
+    expect(namePostTens('51')).toEqual('fifty-one');
+    expect(namePostTens('99')).toEqual('ninety-nine');
+    expect(namePostTens('23')).toEqual('twenty-three');
   });
 });
 
