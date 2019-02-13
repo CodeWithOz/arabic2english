@@ -55,7 +55,7 @@ const tensMap = {
 
 // this function will be called after the leading digit has
 // been confirmed as one
-export function handleTens(strNum) {
+export function nameTens(strNum) {
   return tensMap[strNum];
 }
 
@@ -74,7 +74,7 @@ export default function parseDouble(strNum) {
   }
 
   if (firstDigit === '1') {
-    return handleTens(strNum);
+    return nameTens(strNum);
   }
 
   if (firstDigit.search(/[2-9]/) === 0) {

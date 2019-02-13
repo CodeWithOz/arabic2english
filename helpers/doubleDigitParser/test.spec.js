@@ -2,7 +2,7 @@ import parseDouble, {
   getFirstDigit,
   getSecondDigit,
   nameSecondDigit,
-  handleTens,
+  nameTens,
   getPostTenName,
   namePostTens,
   handleLeadingZeros
@@ -88,22 +88,22 @@ describe('nameSecondDigit', () => {
   });
 });
 
-describe('handleTens', () => {
+describe('nameTens', () => {
   test('is a function', () => {
-    expect(typeof handleTens).toEqual('function');
+    expect(typeof nameTens).toEqual('function');
   });
 
   test('correctly names 10-19', () => {
-    expect(handleTens('10')).toEqual('ten');
-    expect(handleTens('11')).toEqual('eleven');
-    expect(handleTens('12')).toEqual('twelve');
-    expect(handleTens('13')).toEqual('thirteen');
-    expect(handleTens('14')).toEqual('fourteen');
-    expect(handleTens('15')).toEqual('fifteen');
-    expect(handleTens('16')).toEqual('sixteen');
-    expect(handleTens('17')).toEqual('seventeen');
-    expect(handleTens('18')).toEqual('eighteen');
-    expect(handleTens('19')).toEqual('nineteen');
+    expect(nameTens('10')).toEqual('ten');
+    expect(nameTens('11')).toEqual('eleven');
+    expect(nameTens('12')).toEqual('twelve');
+    expect(nameTens('13')).toEqual('thirteen');
+    expect(nameTens('14')).toEqual('fourteen');
+    expect(nameTens('15')).toEqual('fifteen');
+    expect(nameTens('16')).toEqual('sixteen');
+    expect(nameTens('17')).toEqual('seventeen');
+    expect(nameTens('18')).toEqual('eighteen');
+    expect(nameTens('19')).toEqual('nineteen');
   });
 });
 
