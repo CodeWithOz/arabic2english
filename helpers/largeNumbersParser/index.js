@@ -1,3 +1,5 @@
+import parseTriple from '../tripleDigitParser';
+
 export function getLast3chars(strNum) {
   return strNum.slice(-3);
 }
@@ -22,4 +24,20 @@ export function getSetName(setIndex) {
   return setsMap[setIndex];
 }
 
-export default function parseLarge() {}
+export default function parseLarge(strNum) {
+  let setIndex = 0,
+    name = '';
+
+  do {
+    const last3chars = getLast3chars(strNum).padStart(3, '0');
+    setIndex++;
+    name = parseTriple(last3chars);
+    if (name !== '') {
+      const setName = getSetName(setIndex);
+      if (setName !== '') name += ` ${setName}`;
+    }
+    strNum = removeLast3chars(strNum);
+  } while (strNum.length > 3);
+
+  return name;
+}
