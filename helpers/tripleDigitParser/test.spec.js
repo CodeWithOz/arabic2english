@@ -65,4 +65,10 @@ describe('handleLast2digits', () => {
   test('is a function', () => {
     expect(typeof handleLast2digits).toEqual('function');
   });
+
+  test('correctly names the last 2 digits', () => {
+    expect(handleLast2digits(203)).toEqual('three');
+    expect(handleLast2digits(485)).toEqual('eighty-five');
+    expect(handleLast2digits(111)).toEqual('eleven');
+  });
 });
