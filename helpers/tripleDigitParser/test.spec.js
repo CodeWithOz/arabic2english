@@ -1,4 +1,4 @@
-import { handleLeadingZeros } from './';
+import { handleLeadingZeros, removeFirstDigit } from './';
 
 describe('handleLeadingZeros', () => {
   test('is a function', () => {
@@ -13,5 +13,11 @@ describe('handleLeadingZeros', () => {
     expect(handleLeadingZeros('002')).toEqual('two');
     expect(handleLeadingZeros('003')).toEqual('three');
     expect(handleLeadingZeros('004')).toEqual('four');
+  });
+});
+
+describe('removeFirstDigit', () => {
+  test('is a function', () => {
+    expect(typeof removeFirstDigit).toEqual('function');
   });
 });
