@@ -1,4 +1,4 @@
-import {
+import parseTriple, {
   handleLeadingZeros,
   removeFirstDigit,
   getHundredName,
@@ -70,5 +70,11 @@ describe('nameLast2digits', () => {
     expect(nameLast2digits('203')).toEqual('three');
     expect(nameLast2digits('485')).toEqual('eighty-five');
     expect(nameLast2digits('111')).toEqual('eleven');
+  });
+});
+
+describe('parseTriple', () => {
+  test('is a function', () => {
+    expect(typeof parseTriple).toEqual('function');
   });
 });
