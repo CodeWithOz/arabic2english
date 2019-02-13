@@ -26,3 +26,5 @@ export function getHundredName(strNum) {
     last2digitsName !== '' ? ` and ${last2digitsName}` : ''
   }`;
 }
+
+export default function parseTriple() {}
