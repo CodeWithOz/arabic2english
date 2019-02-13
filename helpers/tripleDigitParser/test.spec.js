@@ -81,4 +81,10 @@ describe('parseTriple', () => {
   test(`doesn't name 000`, () => {
     expect(parseTriple('000')).toEqual('');
   });
+
+  test('correctly names 01*-09*', () => {
+    expect(parseTriple('010')).toEqual('ten');
+    expect(parseTriple('012')).toEqual('twelve');
+    expect(parseTriple('036')).toEqual('thirty-six');
+  });
 });
