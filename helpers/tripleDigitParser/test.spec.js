@@ -87,4 +87,10 @@ describe('parseTriple', () => {
     expect(parseTriple('012')).toEqual('twelve');
     expect(parseTriple('036')).toEqual('thirty-six');
   });
+
+  test('correctly names 1**-9**', () => {
+    expect(parseTriple('204')).toEqual('two hundred and four');
+    expect(parseTriple('815')).toEqual('eight hundred and fifteen');
+    expect(parseTriple('777')).toEqual('seven hundred and seventy-seven');
+  });
 });
