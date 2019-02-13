@@ -10,3 +10,5 @@ export function handleLeadingZeros(strNum) {
   const last2digits = removeFirstDigit(strNum);
   return parseDouble(last2digits);
 }
+
+export function getHundredName() {}
