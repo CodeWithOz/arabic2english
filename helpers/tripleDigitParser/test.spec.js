@@ -1,4 +1,9 @@
-import { handleLeadingZeros, removeFirstDigit, getHundredName } from './';
+import {
+  handleLeadingZeros,
+  removeFirstDigit,
+  getHundredName,
+  handleLast2digits
+} from './';
 
 describe('handleLeadingZeros', () => {
   test('is a function', () => {
@@ -53,5 +58,11 @@ describe('getHundredName', () => {
     expect(getHundredName('305')).toEqual('three hundred and five');
     expect(getHundredName('802')).toEqual('eight hundred and two');
     expect(getHundredName('908')).toEqual('nine hundred and eight');
+  });
+});
+
+describe('handleLast2digits', () => {
+  test('is a function', () => {
+    expect(typeof handleLast2digits).toEqual('function');
   });
 });
