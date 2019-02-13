@@ -1,4 +1,4 @@
-import { handleLeadingZeros, removeFirstDigit } from './';
+import { handleLeadingZeros, removeFirstDigit, getHundredName } from './';
 
 describe('handleLeadingZeros', () => {
   test('is a function', () => {
@@ -29,5 +29,11 @@ describe('removeFirstDigit', () => {
 
   test('returns the last 2 chars in a 3-char string', () => {
     expect(removeFirstDigit('101')).toEqual('01');
+  });
+});
+
+describe('getHundredName', () => {
+  test('is a function', () => {
+    expect(typeof getHundredName).toEqual('function');
   });
 });
