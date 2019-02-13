@@ -33,4 +33,8 @@ export default function parseTriple(strNum) {
   if (firstDigit === '0') {
     return handleLeadingZeros(strNum);
   }
+
+  if (/[1-9]/.test(firstDigit)) {
+    return getHundredName(strNum);
+  }
 }
