@@ -21,3 +21,5 @@ const setsMap = {
 export function getSetName(setIndex) {
   return setsMap[setIndex];
 }
+
+export default function parseLarge() {}
