@@ -109,6 +109,13 @@ describe('isHundredsEdgeCase', () => {
     expect(typeof isHundredsEdgeCase).toEqual('function');
   });
 
+  test('returns false if first argument is not 1', () => {
+    // these tests will supply second and
+    // third arguments that are meant to pass
+    expect(isHundredsEdgeCase(2, '010', '1')).toBe(false);
+    expect(isHundredsEdgeCase(4, '056', '4051')).toBe(false);
+  });
+
   test('returns false if hundreds digit is non-zero', () => {
     expect(isHundredsEdgeCase(1, '100', '')).toBe(false);
     expect(isHundredsEdgeCase(1, '100', '0')).toBe(false);
