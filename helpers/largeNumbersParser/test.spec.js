@@ -63,26 +63,31 @@ describe('parseLarge', () => {
     expect(parseLarge('81')).toEqual('eighty-one');
   });
 
-  test('correctly names > 3-digit numbers', () => {
-    expect(parseLarge('1234')).toEqual(
-      'one thousand two hundred and thirty-four'
-    );
-    expect(parseLarge('98765')).toEqual(
-      'ninety-eight thousand seven hundred and sixty-five'
-    );
-    expect(parseLarge('0434879')).toEqual(
-      'four hundred and thirty-four thousand eight hundred and seventy-nine'
-    );
-    expect(parseLarge('2000000')).toEqual('two million');
-    expect(parseLarge('801990014')).toEqual(
-      'eight hundred and one million nine hundred and ninety thousand and fourteen'
-    );
-    expect(parseLarge('60000000001')).toEqual('sixty billion and one');
-    expect(parseLarge('700,012,000,000,055')).toEqual(
-      'seven hundred trillion twelve billion and fifty-five'
-    );
-    expect(parseLarge('3,700,012,000,000,055')).toEqual(
-      'three quadrillion seven hundred trillion twelve billion and fifty-five'
-    );
+  describe('correctly names > 3-digit numbers', () => {
+    test('that contain no zeros', () => {
+      expect(parseLarge('1234')).toEqual(
+        'one thousand two hundred and thirty-four'
+      );
+      expect(parseLarge('98765')).toEqual(
+        'ninety-eight thousand seven hundred and sixty-five'
+      );
+    });
+
+    test('other large numbers', () => {
+      expect(parseLarge('0434879')).toEqual(
+        'four hundred and thirty-four thousand eight hundred and seventy-nine'
+      );
+      expect(parseLarge('2000000')).toEqual('two million');
+      expect(parseLarge('801990014')).toEqual(
+        'eight hundred and one million nine hundred and ninety thousand and fourteen'
+      );
+      expect(parseLarge('60000000001')).toEqual('sixty billion and one');
+      expect(parseLarge('700,012,000,000,055')).toEqual(
+        'seven hundred trillion twelve billion and fifty-five'
+      );
+      expect(parseLarge('3,700,012,000,000,055')).toEqual(
+        'three quadrillion seven hundred trillion twelve billion and fifty-five'
+      );
+    });
   });
 });
