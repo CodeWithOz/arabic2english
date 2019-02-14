@@ -117,7 +117,6 @@ describe('isHundredsEdgeCase', () => {
   });
 
   test('returns false if hundreds digit is non-zero', () => {
-    expect(isHundredsEdgeCase(1, '100', '')).toBe(false);
     expect(isHundredsEdgeCase(1, '100', '0')).toBe(false);
     expect(isHundredsEdgeCase(1, '100', '10')).toBe(false);
   });
@@ -130,5 +129,10 @@ describe('isHundredsEdgeCase', () => {
   test('returns false if only zeros precede hundreds digit', () => {
     expect(isHundredsEdgeCase(1, '010', '0')).toBe(false);
     expect(isHundredsEdgeCase(1, '001', '0000')).toBe(false);
+  });
+
+  test('returns false if nothing precedes hundreds digit', () => {
+    expect(isHundredsEdgeCase(1, '010', '')).toBe(false);
+    expect(isHundredsEdgeCase(1, '001', '')).toBe(false);
   });
 });
