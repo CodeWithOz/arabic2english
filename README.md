@@ -3,6 +3,8 @@
 This converter provides the written names for numbers (arabic
 numerals). For instance, 11 becomes 'eleven'.
 
+![Screenshot of terminal showing converter output](./Screenshot.png)
+
 ## Usage
 
 This package requires [NodeJS](https://nodejs.org) and
