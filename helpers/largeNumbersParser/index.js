@@ -1,6 +1,5 @@
 import parseTriple from '../tripleDigitParser';
-
-export function isHundredsEdgeCase() {}
+import { getFirstDigit } from '../';
 
 export function getLast3chars(strNum) {
   return strNum.slice(-3);
@@ -39,4 +38,12 @@ export default function parseLarge(strNum) {
   } while (strNum.length > 0);
 
   return name;
+}
+
+export function isHundredsEdgeCase(setIndex, last3chars, remainder) {
+  if (getFirstDigit(last3chars) !== '0') {
+    return false;
+  }
+
+  return true;
 }
