@@ -1,4 +1,4 @@
-import parseTriple from '../tripleDigitParser';
+import parseTriple, { removeFirstDigit } from '../tripleDigitParser';
 import { getFirstDigit } from '../';
 
 export function getLast3chars(strNum) {
@@ -46,6 +46,11 @@ export function isHundredsEdgeCase(setIndex, last3chars, remainder) {
   }
 
   if (getFirstDigit(last3chars) !== '0') {
+    return false;
+  }
+
+  if (!/[1-9]/.test(removeFirstDigit(last3chars))) {
+    // no non-zero chars after hundreds digit
     return false;
   }
 
