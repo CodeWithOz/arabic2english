@@ -22,9 +22,9 @@ describe('removeLast3chars', () => {
     expect(typeof removeLast3chars).toEqual('function');
   });
 
-  test('returns the same string when length is less than 4', () => {
-    expect(removeLast3chars('323')).toEqual('323');
-    expect(removeLast3chars('8')).toEqual('8');
+  test('returns an empty string when length is less than 4', () => {
+    expect(removeLast3chars('323')).toEqual('');
+    expect(removeLast3chars('8')).toEqual('');
   });
 
   test('removes the last 3 chars when length is > 3', () => {
