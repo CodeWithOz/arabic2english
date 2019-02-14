@@ -73,10 +73,17 @@ describe('parseLarge', () => {
       );
     });
 
-    test('other large numbers', () => {
+    test('that only have a leading zero', () => {
       expect(parseLarge('0434879')).toEqual(
         'four hundred and thirty-four thousand eight hundred and seventy-nine'
       );
+
+      expect(parseLarge('09434879')).toEqual(
+        'nine million four hundred and thirty-four thousand eight hundred and seventy-nine'
+      );
+    });
+
+    test('other large numbers', () => {
       expect(parseLarge('2000000')).toEqual('two million');
       expect(parseLarge('801990014')).toEqual(
         'eight hundred and one million nine hundred and ninety thousand and fourteen'
