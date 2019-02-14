@@ -1,4 +1,9 @@
-import parseLarge, { getLast3chars, getSetName, removeLast3chars } from './';
+import parseLarge, {
+  getLast3chars,
+  getSetName,
+  removeLast3chars,
+  isHundredsEdgeCase
+} from './';
 
 describe('getLast3chars', () => {
   test('is a function', () => {
@@ -96,5 +101,11 @@ describe('parseLarge', () => {
     test('other large numbers', () => {
       expect(parseLarge('2000000')).toEqual('two million');
     });
+  });
+});
+
+describe('isHundredsEdgeCase', () => {
+  test('is a function', () => {
+    expect(typeof isHundredsEdgeCase).toEqual('function');
   });
 });
