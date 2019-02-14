@@ -1,4 +1,4 @@
-import converter from './arabic2english';
+import converter from './converter';
 
 describe('converter', () => {
   test('is a function', () => {
