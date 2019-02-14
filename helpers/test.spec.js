@@ -33,4 +33,9 @@ describe('isZero', () => {
     expect(isZero('2215')).toBe(false);
     expect(isZero('8048603')).toBe(false);
   });
+
+  test('returns true if number contains only zero(s)', () => {
+    expect(isZero('000000000000')).toBe(true);
+    expect(isZero('0')).toBe(true);
+  });
 });
