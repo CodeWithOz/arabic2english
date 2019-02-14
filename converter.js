@@ -17,3 +17,6 @@ export default function converter(strNum) {
 
   return name;
 }
+
+const [, , strNum] = process.argv;
+console.log(converter(strNum));
