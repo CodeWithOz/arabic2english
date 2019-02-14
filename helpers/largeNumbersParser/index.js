@@ -49,14 +49,21 @@ export default function parseLarge(strNum) {
 
   do {
     const last3chars = getLast3chars(strNum).padStart(3, '0');
+    strNum = removeLast3chars(strNum);
     setIndex++;
     let baseName = parseTriple(last3chars);
     if (baseName !== '') {
       const setName = getSetName(setIndex);
       if (setName !== '') baseName += ` ${setName}`;
       name = name !== '' ? `${baseName} ${name}` : baseName;
+
+      // edge case: the hundreds digit is zero and there are non-zero
+      // digits before and after it
+      // an 'and' must precede the name of the tens and units digits
+      if (isHundredsEdgeCase(setIndex, last3chars, strNum)) {
+        name = `and ${name}`;
+      }
     }
-    strNum = removeLast3chars(strNum);
   } while (strNum.length > 0);
 
   return name;
