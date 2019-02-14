@@ -5,10 +5,6 @@ test('parseSingle is a function', () => {
 });
 
 describe('parseSingle returns the correct name for', () => {
-  test('0', () => {
-    expect(parseSingle('0')).toEqual('zero');
-  });
-
   test('1', () => {
     expect(parseSingle('1')).toEqual('one');
   });
