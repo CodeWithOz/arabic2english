@@ -41,6 +41,10 @@ export default function parseLarge(strNum) {
 }
 
 export function isHundredsEdgeCase(setIndex, last3chars, remainder) {
+  if (setIndex !== 1) {
+    return false;
+  }
+
   if (getFirstDigit(last3chars) !== '0') {
     return false;
   }
