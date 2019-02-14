@@ -136,4 +136,10 @@ describe('isHundredsEdgeCase', () => {
     expect(isHundredsEdgeCase(1, '090', '')).toBe(false);
     expect(isHundredsEdgeCase(1, '004', '')).toBe(false);
   });
+
+  test('returns true if non-zero digits lead and trail zero hundreds digit', () => {
+    expect(isHundredsEdgeCase(1, '098', '1432')).toBe(true);
+    expect(isHundredsEdgeCase(1, '005', '2000000')).toBe(true);
+    expect(isHundredsEdgeCase(1, '020', '4')).toBe(true);
+  });
 });
