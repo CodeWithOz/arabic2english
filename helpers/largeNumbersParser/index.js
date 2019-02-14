@@ -21,25 +21,6 @@ export function getSetName(setIndex) {
   return setsMap[setIndex];
 }
 
-export default function parseLarge(strNum) {
-  let setIndex = 0,
-    name = '';
-
-  do {
-    const last3chars = getLast3chars(strNum).padStart(3, '0');
-    setIndex++;
-    let baseName = parseTriple(last3chars);
-    if (baseName !== '') {
-      const setName = getSetName(setIndex);
-      if (setName !== '') baseName += ` ${setName}`;
-      name = name !== '' ? `${baseName} ${name}` : baseName;
-    }
-    strNum = removeLast3chars(strNum);
-  } while (strNum.length > 0);
-
-  return name;
-}
-
 export function isHundredsEdgeCase(setIndex, last3chars, remainder) {
   if (setIndex !== 1) {
     return false;
@@ -60,4 +41,23 @@ export function isHundredsEdgeCase(setIndex, last3chars, remainder) {
   }
 
   return true;
+}
+
+export default function parseLarge(strNum) {
+  let setIndex = 0,
+    name = '';
+
+  do {
+    const last3chars = getLast3chars(strNum).padStart(3, '0');
+    setIndex++;
+    let baseName = parseTriple(last3chars);
+    if (baseName !== '') {
+      const setName = getSetName(setIndex);
+      if (setName !== '') baseName += ` ${setName}`;
+      name = name !== '' ? `${baseName} ${name}` : baseName;
+    }
+    strNum = removeLast3chars(strNum);
+  } while (strNum.length > 0);
+
+  return name;
 }
