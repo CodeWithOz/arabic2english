@@ -30,4 +30,25 @@ describe('converter', () => {
       'minus sixty-six quadrillion three hundred and twenty billion four hundred and eighty-seven million nine hundred and sixty-five thousand and one'
     );
   });
+
+  test('correctly names positive numbers', () => {
+    expect(converter('2')).toEqual('two');
+    expect(converter('10')).toEqual('ten');
+    expect(converter('305')).toEqual('three hundred and five');
+    expect(converter('985478')).toEqual(
+      'nine hundred and eighty-five thousand four hundred and seventy-eight'
+    );
+    expect(converter('63204019')).toEqual(
+      'sixty-three million two hundred and four thousand and nineteen'
+    );
+    expect(converter('1023024870')).toEqual(
+      'one billion twenty-three million twenty-four thousand eight hundred and seventy'
+    );
+    expect(converter('500000365201254')).toEqual(
+      'five hundred trillion three hundred and sixty-five million two hundred and one thousand two hundred and fifty-four'
+    );
+    expect(converter('66000320487965001')).toEqual(
+      'sixty-six quadrillion three hundred and twenty billion four hundred and eighty-seven million nine hundred and sixty-five thousand and one'
+    );
+  });
 });
