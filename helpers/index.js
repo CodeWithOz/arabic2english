@@ -6,4 +6,6 @@ export function removeFirstDigit(strNum) {
   return strNum.slice(1);
 }
 
-export function isZero() {}
+export function isZero(strNum) {
+  return /^0+$/.test(strNum);
+}
