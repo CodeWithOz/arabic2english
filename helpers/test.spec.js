@@ -1,4 +1,4 @@
-import { getFirstDigit } from './';
+import { getFirstDigit, removeFirstDigit } from './';
 
 describe('getFirstDigit', () => {
   test('is a function', () => {
@@ -10,5 +10,15 @@ describe('getFirstDigit', () => {
     expect(getFirstDigit('23')).toEqual('2');
     expect(getFirstDigit('57')).toEqual('5');
     expect(getFirstDigit('94')).toEqual('9');
+  });
+});
+
+describe('removeFirstDigit', () => {
+  test('is a function', () => {
+    expect(typeof removeFirstDigit).toEqual('function');
+  });
+
+  test('returns the last 2 chars in a 3-char string', () => {
+    expect(removeFirstDigit('101')).toEqual('01');
   });
 });

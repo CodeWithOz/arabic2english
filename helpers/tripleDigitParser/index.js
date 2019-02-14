@@ -1,10 +1,6 @@
 import parseDouble from '../doubleDigitParser';
 import parseSingle from '../singleDigitParser';
-import { getFirstDigit } from '../';
-
-export function removeFirstDigit(strNum) {
-  return strNum.slice(1);
-}
+import { getFirstDigit, removeFirstDigit } from '../';
 
 export function nameLast2digits(strNum) {
   const last2digits = removeFirstDigit(strNum);

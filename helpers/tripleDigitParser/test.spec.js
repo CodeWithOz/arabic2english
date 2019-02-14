@@ -1,6 +1,5 @@
 import parseTriple, {
   handleLeadingZeros,
-  removeFirstDigit,
   getHundredName,
   nameLast2digits
 } from './';
@@ -24,16 +23,6 @@ describe('handleLeadingZeros', () => {
     expect(handleLeadingZeros('016')).toEqual('sixteen');
     expect(handleLeadingZeros('040')).toEqual('forty');
     expect(handleLeadingZeros('075')).toEqual('seventy-five');
-  });
-});
-
-describe('removeFirstDigit', () => {
-  test('is a function', () => {
-    expect(typeof removeFirstDigit).toEqual('function');
-  });
-
-  test('returns the last 2 chars in a 3-char string', () => {
-    expect(removeFirstDigit('101')).toEqual('01');
   });
 });
 

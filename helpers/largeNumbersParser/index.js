@@ -1,5 +1,5 @@
-import parseTriple, { removeFirstDigit } from '../tripleDigitParser';
-import { getFirstDigit } from '../';
+import parseTriple from '../tripleDigitParser';
+import { getFirstDigit, removeFirstDigit } from '../';
 
 export function getLast3chars(strNum) {
   return strNum.slice(-3);
