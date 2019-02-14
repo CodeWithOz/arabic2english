@@ -83,18 +83,18 @@ describe('parseLarge', () => {
       );
     });
 
-    test('other large numbers', () => {
-      expect(parseLarge('2000000')).toEqual('two million');
+    test('where the hundreds digit is zero', () => {
       expect(parseLarge('801990014')).toEqual(
         'eight hundred and one million nine hundred and ninety thousand and fourteen'
       );
       expect(parseLarge('60000000001')).toEqual('sixty billion and one');
-      expect(parseLarge('700,012,000,000,055')).toEqual(
+      expect(parseLarge('700012000000055')).toEqual(
         'seven hundred trillion twelve billion and fifty-five'
       );
-      expect(parseLarge('3,700,012,000,000,055')).toEqual(
-        'three quadrillion seven hundred trillion twelve billion and fifty-five'
-      );
+    });
+
+    test('other large numbers', () => {
+      expect(parseLarge('2000000')).toEqual('two million');
     });
   });
 });
