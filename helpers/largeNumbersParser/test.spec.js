@@ -108,4 +108,10 @@ describe('isHundredsEdgeCase', () => {
   test('is a function', () => {
     expect(typeof isHundredsEdgeCase).toEqual('function');
   });
+
+  test('returns false if hundreds digit is non-zero', () => {
+    expect(isHundredsEdgeCase(1, '100', '')).toBe(false);
+    expect(isHundredsEdgeCase(1, '100', '0')).toBe(false);
+    expect(isHundredsEdgeCase(1, '100', '10')).toBe(false);
+  });
 });
