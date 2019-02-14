@@ -27,13 +27,14 @@ export default function parseLarge(strNum) {
   do {
     const last3chars = getLast3chars(strNum).padStart(3, '0');
     setIndex++;
-    name = parseTriple(last3chars);
-    if (name !== '') {
+    let baseName = parseTriple(last3chars);
+    if (baseName !== '') {
       const setName = getSetName(setIndex);
-      if (setName !== '') name += ` ${setName}`;
+      if (setName !== '') baseName += ` ${setName}`;
     }
+    name = name !== '' ? `${baseName} ${name}` : baseName;
     strNum = removeLast3chars(strNum);
-  } while (strNum.length > 3);
+  } while (strNum.length > 0);
 
   return name;
 }
