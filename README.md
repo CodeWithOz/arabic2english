@@ -1,7 +1,7 @@
 # arabic2english Numerals Converter 🔄
 
-This converter provides the written names for numbers (arabic
-numerals). For instance, 11 becomes 'eleven'.
+A terminal-based converter that provides the written names for
+numbers (arabic numerals). For instance, 11 becomes 'eleven'.
 
 ![Screenshot of terminal showing converter output](./Screenshot.png)
 
