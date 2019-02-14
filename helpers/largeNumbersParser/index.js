@@ -54,5 +54,10 @@ export function isHundredsEdgeCase(setIndex, last3chars, remainder) {
     return false;
   }
 
+  if (!/[1-9]/.test(remainder)) {
+    // no non-zero chars before hundred digit
+    return false;
+  }
+
   return true;
 }
