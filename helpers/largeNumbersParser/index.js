@@ -31,8 +31,8 @@ export default function parseLarge(strNum) {
     if (baseName !== '') {
       const setName = getSetName(setIndex);
       if (setName !== '') baseName += ` ${setName}`;
+      name = name !== '' ? `${baseName} ${name}` : baseName;
     }
-    name = name !== '' ? `${baseName} ${name}` : baseName;
     strNum = removeLast3chars(strNum);
   } while (strNum.length > 0);
 
