@@ -1,4 +1,4 @@
-import { getFirstDigit, removeFirstDigit } from './';
+import { getFirstDigit, removeFirstDigit, isZero } from './';
 
 describe('getFirstDigit', () => {
   test('is a function', () => {
@@ -20,5 +20,11 @@ describe('removeFirstDigit', () => {
 
   test('returns the last 2 chars in a 3-char string', () => {
     expect(removeFirstDigit('101')).toEqual('01');
+  });
+});
+
+describe('isZero', () => {
+  test('is a function', () => {
+    expect(typeof isZero).toEqual('function');
   });
 });
