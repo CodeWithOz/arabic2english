@@ -1,5 +1,7 @@
 import converter from './arabic2english';
 
-test('converter is a function', () => {
-  expect(typeof converter).toEqual('function');
+describe('converter', () => {
+  test('is a function', () => {
+    expect(typeof converter).toEqual('function');
+  });
 });
