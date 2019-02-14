@@ -1,5 +1,7 @@
 import parseTriple from '../tripleDigitParser';
 
+export function isHundredsEdgeCase() {}
+
 export function getLast3chars(strNum) {
   return strNum.slice(-3);
 }
