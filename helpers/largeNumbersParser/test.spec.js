@@ -100,6 +100,9 @@ describe('parseLarge', () => {
 
     test('other large numbers', () => {
       expect(parseLarge('2000000')).toEqual('two million');
+      expect(parseLarge('54000000009000000')).toEqual(
+        'fifty-four quadrillion nine million'
+      );
     });
   });
 });
