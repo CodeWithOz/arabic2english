@@ -27,4 +27,10 @@ describe('isZero', () => {
   test('is a function', () => {
     expect(typeof isZero).toEqual('function');
   });
+
+  test('returns false if number contains a non-zero digit', () => {
+    expect(isZero('0000000000001')).toBe(false);
+    expect(isZero('2215')).toBe(false);
+    expect(isZero('8048603')).toBe(false);
+  });
 });
