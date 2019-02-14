@@ -5,10 +5,6 @@ export function getLast3chars(strNum) {
 }
 
 export function removeLast3chars(strNum) {
-  if (strNum.length < 4) {
-    return strNum;
-  }
-
   return strNum.slice(0, -3);
 }
 
