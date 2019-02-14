@@ -5,3 +5,5 @@ export function getFirstDigit(strNum) {
 export function removeFirstDigit(strNum) {
   return strNum.slice(1);
 }
+
+export function isZero() {}
