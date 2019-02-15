@@ -10,4 +10,6 @@ export function isZero(strNum) {
   return /^0+$/.test(strNum);
 }
 
-export function stripLeadingZeros() {}
+export function stripLeadingZeros(strNum) {
+  return strNum.replace(/^0+/, '');
+}
