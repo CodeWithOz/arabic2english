@@ -44,4 +44,9 @@ describe('stripLeadingZeros', () => {
   test('is a function', () => {
     expect(typeof stripLeadingZeros).toEqual('function');
   });
+
+  test('removes all leading zeros from a string', () => {
+    expect(stripLeadingZeros('0120')).toEqual('120');
+    expect(stripLeadingZeros('00000000584')).toEqual('584');
+  });
 });
