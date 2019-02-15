@@ -34,7 +34,7 @@ sixty-five
 
 The parser:
 
-- Only goes up to the quadrillions, although higher
+- Only goes up to the quadrillions (18 digits), although higher
   numbers can easily be extended. See the
   [Larger Than Quadrillions](#larger-than-quadrillions) section
   for more information.
