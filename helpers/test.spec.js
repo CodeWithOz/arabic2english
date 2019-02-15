@@ -49,4 +49,10 @@ describe('stripLeadingZeros', () => {
     expect(stripLeadingZeros('0120')).toEqual('120');
     expect(stripLeadingZeros('00000000584')).toEqual('584');
   });
+
+  test('returns the same string if there are no leading zeros', () => {
+    expect(stripLeadingZeros('345')).toEqual('345');
+    expect(stripLeadingZeros('8590')).toEqual('8590');
+    expect(stripLeadingZeros('205000')).toEqual('205000');
+  });
 });
