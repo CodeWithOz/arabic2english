@@ -1,9 +1,12 @@
-import { isZero, getFirstDigit, removeFirstDigit } from './helpers';
+import {
+  isZero,
+  getFirstDigit,
+  removeFirstDigit,
+  stripLeadingZeros
+} from './helpers';
 import parseLarge from './helpers/largeNumbersParser';
 
 export default function converter(strNum) {
-  if (isZero(strNum)) return 'zero';
-
   let isNegative = false,
     name = '';
 
@@ -12,6 +15,10 @@ export default function converter(strNum) {
     name = 'minus ';
     strNum = removeFirstDigit(strNum);
   }
+
+  if (isZero(strNum)) return 'zero';
+
+  strNum = stripLeadingZeros(strNum);
 
   name += parseLarge(strNum);
 
