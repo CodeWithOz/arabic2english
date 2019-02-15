@@ -9,3 +9,5 @@ export function removeFirstDigit(strNum) {
 export function isZero(strNum) {
   return /^0+$/.test(strNum);
 }
+
+export function stripLeadingZeros() {}
