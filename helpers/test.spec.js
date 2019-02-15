@@ -1,4 +1,4 @@
-import { getFirstDigit, removeFirstDigit, isZero } from './';
+import { getFirstDigit, removeFirstDigit, isZero, stripLeadingZeros } from './';
 
 describe('getFirstDigit', () => {
   test('is a function', () => {
@@ -37,5 +37,11 @@ describe('isZero', () => {
   test('returns true if number contains only zero(s)', () => {
     expect(isZero('000000000000')).toBe(true);
     expect(isZero('0')).toBe(true);
+  });
+});
+
+describe('stripLeadingZeros', () => {
+  test('is a function', () => {
+    expect(typeof stripLeadingZeros).toEqual('function');
   });
 });
